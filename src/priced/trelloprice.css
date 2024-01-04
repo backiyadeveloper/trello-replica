@@ -1,0 +1,20 @@
+.box{
+    border: 2px solid #dfe1e6; 
+   
+margin-top: 5rem;
+}
+.but1:hover{
+    background-color: #e6fcff;
+}
+.but2:hover{
+    background-color: white;
+}
+ul {
+    list-style: none;
+  }
+  
+  ul li:before {
+    content: '  ✓  ';
+    color: green;
+    font-size: larger;
+  }

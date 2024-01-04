@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Productivity from "./componenet1/productivity";
+import {Priced} from "./priced/trellopriced";
+import {Standerd} from "./priced/standered"
+import {Premium} from "./priced/premium";
+import {Sidebar} from "./sidenav/sidenav";
+import {Trelloenter} from "./sidenav/trelloenter";
+import {Compareplane} from "./priced/compareplans";
+//import {Ticket} from "./ticket";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+  <Routes>
+    {/* <Route path='/'element={<Priced/>}/>
+    <Route path='/standered' element={<Standerd/>}/>
+    <Route path='/Premium' element={<Premium/>}/>
+    <Route path='/Compareplane' element={<Compareplane/>}></Route>  */}
+    
+     <Route path='/'element={<Productivity/>}/>
+     <Route path='/Sidebar' element={<Sidebar/>}/>
+    </Routes>
+   </BrowserRouter> 
+  {/* <Productivity/> */}
+    </>
   );
 }
 
